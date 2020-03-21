@@ -11,12 +11,12 @@ on:
   release:
     types: [published]
 
-  push:
-    branches: 
-      - master
+  #push:
+    #branches: 
+      #- master
 
   schedule:
-    - cron: 0 8 * * 5
+    - cron: 0 8 * * 0
   
   #watch:
   #  types: [started]
@@ -68,7 +68,7 @@ jobs:
         ./scripts/feeds update -a
         ./scripts/feeds install -a
         ./scripts/feeds install -a
-    - name: Configuration Customization - Build_Newifi_D2
+    - name: Configuration Customization - Build_4B
       env:
         CONFIG_FILE: '4b.config'
       run: |
